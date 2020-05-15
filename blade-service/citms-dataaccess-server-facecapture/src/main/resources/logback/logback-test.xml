@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration scan="true" scanPeriod="60 seconds" debug="true">
+
+    <springProperty scope="context" name="logName" source="log.name" defaultValue="web"/>
+    <springProperty scope="context" name="logLevel" source="log.level" defaultValue="INFO"/>
+    <property name="logName" value="${logName}"/>
+    <property name="logBase" value="${user.dir}/logs" />
+    <!-- Console appender -->
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <!--格式化输出：%d表示日期，%thread表示线程名，%-5level：级别从左显示5个字符宽度%msg：日志消息，%n是换行符-->
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%logger] %-5level %msg [%thread]%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- create a file per day -->
+    <appender name="FILE"
+              class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <!-- Supports multiple JVM to operate the same log file at the same time -->
+        <prudent>true</prudent>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <!--日志文件目录-->
+            <fileNamePattern>${logBase}/${logName}.%d{yyyy-MM-dd}.log</fileNamePattern>
+
+            <!--保留3天的日志-->
+            <maxHistory>3</maxHistory>
+        </rollingPolicy>
+
+        <!-- pattern layout -->
+        <layout class="ch.qos.logback.classic.PatternLayout">
+            <Pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%logger] %-5level %msg [%thread]%n</Pattern>
+        </layout>
+    </appender>
+
+    <root level="${logLevel}">
+        <appender-ref ref="STDOUT" />
+        <appender-ref ref="FILE" />
+    </root>
+
+</configuration>

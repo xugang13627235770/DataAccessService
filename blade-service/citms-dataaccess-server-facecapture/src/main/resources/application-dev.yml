@@ -1,0 +1,40 @@
+# 服务器端口
+server:
+  port: 6025
+
+spring:
+  kafka:
+    bootstrap-servers: 192.168.10.109:9092
+    producer:
+      retries: 0
+      batch-size: 2
+      buffer-memory: 33554
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+    consumer:
+      group-id: spring-boot-demo
+      # 手动提交
+      enable-auto-commit: false
+      auto-offset-reset: latest
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      properties:
+        session.timeout.ms: 60000
+    listener:
+      log-container-config: false
+      concurrency: 5
+      # 手动提交
+      ack-mode: manual_immediate
+  rabbitmq:
+    host: 192.168.0.41
+    port: 5672
+    username: admin
+    password: citms
+    # 手动提交消息
+    virtual-host: /
+    # 手动提交消息
+    listener:
+      simple:
+        acknowledge-mode: manual
+        concurrency: 5
+        max-concurrency: 10

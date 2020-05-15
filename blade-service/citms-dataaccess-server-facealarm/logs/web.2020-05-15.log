@@ -1,0 +1,2261 @@
+2020-05-15 09:38:00.044 [cn.citms.dataaccessserver.mq.RabbitmqApplicationTests] INFO  Starting RabbitmqApplicationTests on DESKTOP-E039QA7 with PID 2316 (started by DELL in D:\IdeaProjects\DataAccessService\blade-service\citms-dataaccess-server-facealarm) [main]
+2020-05-15 09:38:00.045 [cn.citms.dataaccessserver.mq.RabbitmqApplicationTests] INFO  The following profiles are active: dev [main]
+2020-05-15 09:38:02.417 [org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor] INFO  Initializing ExecutorService 'applicationTaskExecutor' [main]
+2020-05-15 09:38:02.841 [org.apache.kafka.clients.admin.AdminClientConfig] INFO  AdminClientConfig values: 
+	bootstrap.servers = [192.168.10.109:9092]
+	client.dns.lookup = default
+	client.id = 
+	connections.max.idle.ms = 300000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 120000
+	retries = 5
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = https
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+ [main]
+2020-05-15 09:38:02.956 [org.apache.kafka.common.utils.AppInfoParser] INFO  Kafka version: 2.3.1 [main]
+2020-05-15 09:38:02.957 [org.apache.kafka.common.utils.AppInfoParser] INFO  Kafka commitId: 18a913733fb71c01 [main]
+2020-05-15 09:38:02.957 [org.apache.kafka.common.utils.AppInfoParser] INFO  Kafka startTimeMs: 1589506682954 [main]
+2020-05-15 09:38:03.170 [org.apache.kafka.clients.consumer.ConsumerConfig] INFO  ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = latest
+	bootstrap.servers = [192.168.10.109:9092]
+	check.crcs = true
+	client.dns.lookup = default
+	client.id = 
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = spring-boot-demo
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	session.timeout.ms = 60000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = https
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+ [main]
+2020-05-15 09:38:03.197 [org.apache.kafka.common.utils.AppInfoParser] INFO  Kafka version: 2.3.1 [main]
+2020-05-15 09:38:03.198 [org.apache.kafka.common.utils.AppInfoParser] INFO  Kafka commitId: 18a913733fb71c01 [main]
+2020-05-15 09:38:03.198 [org.apache.kafka.common.utils.AppInfoParser] INFO  Kafka startTimeMs: 1589506683197 [main]
+2020-05-15 09:38:03.199 [org.apache.kafka.clients.consumer.KafkaConsumer] INFO  [Consumer clientId=consumer-1, groupId=spring-boot-demo] Subscribed to topic(s): test1 [main]
+2020-05-15 09:38:03.200 [org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler] INFO  Initializing ExecutorService [main]
+2020-05-15 09:38:03.204 [org.springframework.amqp.rabbit.connection.CachingConnectionFactory] INFO  Attempting to connect to: [192.168.0.41:5672] [main]
+2020-05-15 09:38:03.221 [org.apache.kafka.clients.Metadata] INFO  [Consumer clientId=consumer-1, groupId=spring-boot-demo] Cluster ID: ouEtIML3Ssu4cSL1qjC-wg [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]
+2020-05-15 09:38:03.222 [org.apache.kafka.clients.consumer.internals.AbstractCoordinator] INFO  [Consumer clientId=consumer-1, groupId=spring-boot-demo] Discovered group coordinator 192.168.10.109:9092 (id: 2147483646 rack: null) [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]
+2020-05-15 09:38:03.231 [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator] INFO  [Consumer clientId=consumer-1, groupId=spring-boot-demo] Revoking previously assigned partitions [] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]
+2020-05-15 09:38:03.232 [org.springframework.kafka.listener.KafkaMessageListenerContainer] INFO  spring-boot-demo: partitions revoked: [] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]
+2020-05-15 09:38:03.232 [org.apache.kafka.clients.consumer.internals.AbstractCoordinator] INFO  [Consumer clientId=consumer-1, groupId=spring-boot-demo] (Re-)joining group [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]
+2020-05-15 09:38:03.293 [org.springframework.amqp.rabbit.connection.CachingConnectionFactory] INFO  Created new connection: rabbitConnectionFactory#6e0f7aad:0/SimpleConnection@2a369e14 [delegate=amqp://admin@192.168.0.41:5672/, localPort= 53384] [main]
+2020-05-15 09:38:03.350 [cn.citms.dataaccessserver.mq.RabbitmqApplicationTests] INFO  Started RabbitmqApplicationTests in 3.877 seconds (JVM running for 5.468) [main]
+2020-05-15 09:38:03.748 [org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer] INFO  Waiting for workers to finish. [SpringContextShutdownHook]
+2020-05-15 09:38:04.349 [org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer] INFO  Successfully waited for workers to finish. [SpringContextShutdownHook]
+2020-05-15 09:38:04.356 [org.apache.kafka.clients.consumer.KafkaConsumer] INFO  [Consumer clientId=consumer-1, groupId=spring-boot-demo] Unsubscribed all topics or patterns and assigned partitions [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]
+2020-05-15 09:38:04.357 [org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler] INFO  Shutting down ExecutorService [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]
+2020-05-15 09:38:04.869 [org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer] INFO  spring-boot-demo: Consumer stopped [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]
+2020-05-15 09:38:04.872 [org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer] INFO  Shutdown ignored - container is not active already [SpringContextShutdownHook]
+2020-05-15 09:38:04.872 [org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor] INFO  Shutting down ExecutorService 'applicationTaskExecutor' [SpringContextShutdownHook]
+2020-05-15 09:39:59.519 [cn.citms.dataaccessserver.mq.RabbitmqApplicationTests] INFO  Starting RabbitmqApplicationTests on DESKTOP-E039QA7 with PID 15852 (started by DELL in D:\IdeaProjects\DataAccessService\blade-service\citms-dataaccess-server-facealarm) [main]
+2020-05-15 09:39:59.519 [cn.citms.dataaccessserver.mq.RabbitmqApplicationTests] INFO  The following profiles are active: dev [main]
+2020-05-15 09:40:01.791 [org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor] INFO  Initializing ExecutorService 'applicationTaskExecutor' [main]
+2020-05-15 09:40:02.282 [org.apache.kafka.clients.admin.AdminClientConfig] INFO  AdminClientConfig values: 
+	bootstrap.servers = [192.168.10.109:9092]
+	client.dns.lookup = default
+	client.id = 
+	connections.max.idle.ms = 300000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 120000
+	retries = 5
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = https
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+ [main]
+2020-05-15 09:40:02.349 [org.apache.kafka.common.utils.AppInfoParser] INFO  Kafka version: 2.3.1 [main]
+2020-05-15 09:40:02.351 [org.apache.kafka.common.utils.AppInfoParser] INFO  Kafka commitId: 18a913733fb71c01 [main]
+2020-05-15 09:40:02.351 [org.apache.kafka.common.utils.AppInfoParser] INFO  Kafka startTimeMs: 1589506802348 [main]
+2020-05-15 09:40:02.552 [org.apache.kafka.clients.consumer.ConsumerConfig] INFO  ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = latest
+	bootstrap.servers = [192.168.10.109:9092]
+	check.crcs = true
+	client.dns.lookup = default
+	client.id = 
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = spring-boot-demo
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	session.timeout.ms = 60000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = https
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+ [main]
+2020-05-15 09:40:02.585 [org.apache.kafka.common.utils.AppInfoParser] INFO  Kafka version: 2.3.1 [main]
+2020-05-15 09:40:02.586 [org.apache.kafka.common.utils.AppInfoParser] INFO  Kafka commitId: 18a913733fb71c01 [main]
+2020-05-15 09:40:02.586 [org.apache.kafka.common.utils.AppInfoParser] INFO  Kafka startTimeMs: 1589506802585 [main]
+2020-05-15 09:40:02.586 [org.apache.kafka.clients.consumer.KafkaConsumer] INFO  [Consumer clientId=consumer-1, groupId=spring-boot-demo] Subscribed to topic(s): test1 [main]
+2020-05-15 09:40:02.588 [org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler] INFO  Initializing ExecutorService [main]
+2020-05-15 09:40:02.593 [org.springframework.amqp.rabbit.connection.CachingConnectionFactory] INFO  Attempting to connect to: [192.168.0.41:5672] [main]
+2020-05-15 09:40:02.604 [org.apache.kafka.clients.Metadata] INFO  [Consumer clientId=consumer-1, groupId=spring-boot-demo] Cluster ID: ouEtIML3Ssu4cSL1qjC-wg [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]
+2020-05-15 09:40:02.604 [org.apache.kafka.clients.consumer.internals.AbstractCoordinator] INFO  [Consumer clientId=consumer-1, groupId=spring-boot-demo] Discovered group coordinator 192.168.10.109:9092 (id: 2147483646 rack: null) [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]
+2020-05-15 09:40:02.606 [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator] INFO  [Consumer clientId=consumer-1, groupId=spring-boot-demo] Revoking previously assigned partitions [] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]
+2020-05-15 09:40:02.607 [org.springframework.kafka.listener.KafkaMessageListenerContainer] INFO  spring-boot-demo: partitions revoked: [] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]
+2020-05-15 09:40:02.607 [org.apache.kafka.clients.consumer.internals.AbstractCoordinator] INFO  [Consumer clientId=consumer-1, groupId=spring-boot-demo] (Re-)joining group [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]
+2020-05-15 09:40:02.639 [org.springframework.amqp.rabbit.connection.CachingConnectionFactory] INFO  Created new connection: rabbitConnectionFactory#109d724c:0/SimpleConnection@671d1157 [delegate=amqp://admin@192.168.0.41:5672/, localPort= 53445] [main]
+2020-05-15 09:40:02.676 [cn.citms.dataaccessserver.mq.RabbitmqApplicationTests] INFO  Started RabbitmqApplicationTests in 3.52 seconds (JVM running for 4.191) [main]
+2020-05-15 09:40:02.843 [org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer] INFO  Waiting for workers to finish. [SpringContextShutdownHook]
+2020-05-15 09:40:03.675 [org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer] INFO  Successfully waited for workers to finish. [SpringContextShutdownHook]
+2020-05-15 09:40:03.677 [org.apache.kafka.clients.consumer.KafkaConsumer] INFO  [Consumer clientId=consumer-1, groupId=spring-boot-demo] Unsubscribed all topics or patterns and assigned partitions [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]
+2020-05-15 09:40:03.677 [org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler] INFO  Shutting down ExecutorService [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]
+2020-05-15 09:40:05.153 [org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer] INFO  spring-boot-demo: Consumer stopped [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]
+2020-05-15 09:40:05.159 [org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer] INFO  Shutdown ignored - container is not active already [SpringContextShutdownHook]
+2020-05-15 09:40:05.159 [org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor] INFO  Shutting down ExecutorService 'applicationTaskExecutor' [SpringContextShutdownHook]
+2020-05-15 09:42:13.634 [cn.citms.dataaccessserver.mq.RabbitmqApplicationTests] INFO  Starting RabbitmqApplicationTests on DESKTOP-E039QA7 with PID 12056 (started by DELL in D:\IdeaProjects\DataAccessService\blade-service\citms-dataaccess-server-facealarm) [main]
+2020-05-15 09:42:13.635 [cn.citms.dataaccessserver.mq.RabbitmqApplicationTests] INFO  The following profiles are active: dev [main]
+2020-05-15 09:42:15.717 [org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor] INFO  Initializing ExecutorService 'applicationTaskExecutor' [main]
+2020-05-15 09:42:16.078 [org.apache.kafka.clients.admin.AdminClientConfig] INFO  AdminClientConfig values: 
+	bootstrap.servers = [192.168.10.109:9092]
+	client.dns.lookup = default
+	client.id = 
+	connections.max.idle.ms = 300000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 120000
+	retries = 5
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = https
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+ [main]
+2020-05-15 09:42:16.142 [org.apache.kafka.common.utils.AppInfoParser] INFO  Kafka version: 2.3.1 [main]
+2020-05-15 09:42:16.143 [org.apache.kafka.common.utils.AppInfoParser] INFO  Kafka commitId: 18a913733fb71c01 [main]
+2020-05-15 09:42:16.143 [org.apache.kafka.common.utils.AppInfoParser] INFO  Kafka startTimeMs: 1589506936141 [main]
+2020-05-15 09:42:16.282 [org.apache.kafka.clients.consumer.ConsumerConfig] INFO  ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = latest
+	bootstrap.servers = [192.168.10.109:9092]
+	check.crcs = true
+	client.dns.lookup = default
+	client.id = 
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = spring-boot-demo
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	session.timeout.ms = 60000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = https
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+ [main]
+2020-05-15 09:42:16.320 [org.apache.kafka.common.utils.AppInfoParser] INFO  Kafka version: 2.3.1 [main]
+2020-05-15 09:42:16.320 [org.apache.kafka.common.utils.AppInfoParser] INFO  Kafka commitId: 18a913733fb71c01 [main]
+2020-05-15 09:42:16.320 [org.apache.kafka.common.utils.AppInfoParser] INFO  Kafka startTimeMs: 1589506936320 [main]
+2020-05-15 09:42:16.321 [org.apache.kafka.clients.consumer.KafkaConsumer] INFO  [Consumer clientId=consumer-1, groupId=spring-boot-demo] Subscribed to topic(s): test1 [main]
+2020-05-15 09:42:16.322 [org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler] INFO  Initializing ExecutorService [main]
+2020-05-15 09:42:16.328 [org.springframework.amqp.rabbit.connection.CachingConnectionFactory] INFO  Attempting to connect to: [192.168.0.41:5672] [main]
+2020-05-15 09:42:16.341 [org.apache.kafka.clients.Metadata] INFO  [Consumer clientId=consumer-1, groupId=spring-boot-demo] Cluster ID: ouEtIML3Ssu4cSL1qjC-wg [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]
+2020-05-15 09:42:16.341 [org.apache.kafka.clients.consumer.internals.AbstractCoordinator] INFO  [Consumer clientId=consumer-1, groupId=spring-boot-demo] Discovered group coordinator 192.168.10.109:9092 (id: 2147483646 rack: null) [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]
+2020-05-15 09:42:16.343 [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator] INFO  [Consumer clientId=consumer-1, groupId=spring-boot-demo] Revoking previously assigned partitions [] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]
+2020-05-15 09:42:16.343 [org.springframework.kafka.listener.KafkaMessageListenerContainer] INFO  spring-boot-demo: partitions revoked: [] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]
+2020-05-15 09:42:16.344 [org.apache.kafka.clients.consumer.internals.AbstractCoordinator] INFO  [Consumer clientId=consumer-1, groupId=spring-boot-demo] (Re-)joining group [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]
+2020-05-15 09:42:16.379 [org.springframework.amqp.rabbit.connection.CachingConnectionFactory] INFO  Created new connection: rabbitConnectionFactory#109d724c:0/SimpleConnection@671d1157 [delegate=amqp://admin@192.168.0.41:5672/, localPort= 53508] [main]
+2020-05-15 09:42:16.419 [cn.citms.dataaccessserver.mq.RabbitmqApplicationTests] INFO  Started RabbitmqApplicationTests in 3.158 seconds (JVM running for 3.884) [main]
+2020-05-15 09:42:16.587 [org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer] INFO  Waiting for workers to finish. [SpringContextShutdownHook]
+2020-05-15 09:42:17.417 [org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer] INFO  Successfully waited for workers to finish. [SpringContextShutdownHook]
+2020-05-15 09:42:17.419 [org.apache.kafka.clients.consumer.KafkaConsumer] INFO  [Consumer clientId=consumer-1, groupId=spring-boot-demo] Unsubscribed all topics or patterns and assigned partitions [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]
+2020-05-15 09:42:17.419 [org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler] INFO  Shutting down ExecutorService [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]
+2020-05-15 09:42:17.652 [org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer] INFO  spring-boot-demo: Consumer stopped [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]
+2020-05-15 09:42:17.655 [org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer] INFO  Shutdown ignored - container is not active already [SpringContextShutdownHook]
+2020-05-15 09:42:17.655 [org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor] INFO  Shutting down ExecutorService 'applicationTaskExecutor' [SpringContextShutdownHook]
+2020-05-15 10:17:25.376 [cn.citms.dataaccessserver.mq.RabbitmqApplicationTests] INFO  Starting RabbitmqApplicationTests on DESKTOP-E039QA7 with PID 5448 (started by DELL in D:\IdeaProjects\DataAccessService\blade-service\citms-dataaccess-server-facealarm) [main]
+2020-05-15 10:17:25.377 [cn.citms.dataaccessserver.mq.RabbitmqApplicationTests] INFO  The following profiles are active: dev [main]
+2020-05-15 10:17:27.579 [org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor] INFO  Initializing ExecutorService 'applicationTaskExecutor' [main]
+2020-05-15 10:17:27.949 [org.apache.kafka.clients.admin.AdminClientConfig] INFO  AdminClientConfig values: 
+	bootstrap.servers = [192.168.10.109:9092]
+	client.dns.lookup = default
+	client.id = 
+	connections.max.idle.ms = 300000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 120000
+	retries = 5
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = https
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+ [main]
+2020-05-15 10:17:28.015 [org.apache.kafka.common.utils.AppInfoParser] INFO  Kafka version: 2.3.1 [main]
+2020-05-15 10:17:28.016 [org.apache.kafka.common.utils.AppInfoParser] INFO  Kafka commitId: 18a913733fb71c01 [main]
+2020-05-15 10:17:28.016 [org.apache.kafka.common.utils.AppInfoParser] INFO  Kafka startTimeMs: 1589509048014 [main]
+2020-05-15 10:17:28.164 [org.apache.kafka.clients.consumer.ConsumerConfig] INFO  ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = latest
+	bootstrap.servers = [192.168.10.109:9092]
+	check.crcs = true
+	client.dns.lookup = default
+	client.id = 
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = spring-boot-demo
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	session.timeout.ms = 60000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = https
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+ [main]
+2020-05-15 10:17:28.196 [org.apache.kafka.common.utils.AppInfoParser] INFO  Kafka version: 2.3.1 [main]
+2020-05-15 10:17:28.197 [org.apache.kafka.common.utils.AppInfoParser] INFO  Kafka commitId: 18a913733fb71c01 [main]
+2020-05-15 10:17:28.197 [org.apache.kafka.common.utils.AppInfoParser] INFO  Kafka startTimeMs: 1589509048196 [main]
+2020-05-15 10:17:28.199 [org.apache.kafka.clients.consumer.KafkaConsumer] INFO  [Consumer clientId=consumer-1, groupId=spring-boot-demo] Subscribed to topic(s): test1 [main]
+2020-05-15 10:17:28.200 [org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler] INFO  Initializing ExecutorService [main]
+2020-05-15 10:17:28.205 [org.springframework.amqp.rabbit.connection.CachingConnectionFactory] INFO  Attempting to connect to: [192.168.0.41:5672] [main]
+2020-05-15 10:17:28.222 [org.apache.kafka.clients.Metadata] INFO  [Consumer clientId=consumer-1, groupId=spring-boot-demo] Cluster ID: ouEtIML3Ssu4cSL1qjC-wg [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]
+2020-05-15 10:17:28.223 [org.apache.kafka.clients.consumer.internals.AbstractCoordinator] INFO  [Consumer clientId=consumer-1, groupId=spring-boot-demo] Discovered group coordinator 192.168.10.109:9092 (id: 2147483646 rack: null) [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]
+2020-05-15 10:17:28.225 [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator] INFO  [Consumer clientId=consumer-1, groupId=spring-boot-demo] Revoking previously assigned partitions [] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]
+2020-05-15 10:17:28.226 [org.springframework.kafka.listener.KafkaMessageListenerContainer] INFO  spring-boot-demo: partitions revoked: [] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]
+2020-05-15 10:17:28.226 [org.apache.kafka.clients.consumer.internals.AbstractCoordinator] INFO  [Consumer clientId=consumer-1, groupId=spring-boot-demo] (Re-)joining group [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]
+2020-05-15 10:17:28.268 [org.springframework.amqp.rabbit.connection.CachingConnectionFactory] INFO  Created new connection: rabbitConnectionFactory#109d724c:0/SimpleConnection@671d1157 [delegate=amqp://admin@192.168.0.41:5672/, localPort= 54422] [main]
+2020-05-15 10:17:28.308 [cn.citms.dataaccessserver.mq.RabbitmqApplicationTests] INFO  Started RabbitmqApplicationTests in 3.379 seconds (JVM running for 4.166) [main]
+2020-05-15 10:17:28.503 [org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer] INFO  Waiting for workers to finish. [SpringContextShutdownHook]
+2020-05-15 10:17:29.307 [org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer] INFO  Successfully waited for workers to finish. [SpringContextShutdownHook]
+2020-05-15 10:17:29.309 [org.apache.kafka.clients.consumer.KafkaConsumer] INFO  [Consumer clientId=consumer-1, groupId=spring-boot-demo] Unsubscribed all topics or patterns and assigned partitions [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]
+2020-05-15 10:17:29.310 [org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler] INFO  Shutting down ExecutorService [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]
+2020-05-15 10:17:38.282 [org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer] INFO  spring-boot-demo: Consumer stopped [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]
+2020-05-15 10:17:38.285 [org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer] INFO  Shutdown ignored - container is not active already [SpringContextShutdownHook]
+2020-05-15 10:17:38.285 [org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor] INFO  Shutting down ExecutorService 'applicationTaskExecutor' [SpringContextShutdownHook]
+2020-05-15 10:20:46.434 [cn.citms.dataaccessserver.mq.RabbitmqApplicationTests] INFO  Starting RabbitmqApplicationTests on DESKTOP-E039QA7 with PID 8208 (started by DELL in D:\IdeaProjects\DataAccessService\blade-service\citms-dataaccess-server-facealarm) [main]
+2020-05-15 10:20:46.435 [cn.citms.dataaccessserver.mq.RabbitmqApplicationTests] INFO  The following profiles are active: dev [main]
+2020-05-15 10:20:48.877 [org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor] INFO  Initializing ExecutorService 'applicationTaskExecutor' [main]
+2020-05-15 10:20:49.320 [org.apache.kafka.clients.admin.AdminClientConfig] INFO  AdminClientConfig values: 
+	bootstrap.servers = [192.168.10.109:9092]
+	client.dns.lookup = default
+	client.id = 
+	connections.max.idle.ms = 300000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 120000
+	retries = 5
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = https
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+ [main]
+2020-05-15 10:20:49.403 [org.apache.kafka.common.utils.AppInfoParser] INFO  Kafka version: 2.3.1 [main]
+2020-05-15 10:20:49.404 [org.apache.kafka.common.utils.AppInfoParser] INFO  Kafka commitId: 18a913733fb71c01 [main]
+2020-05-15 10:20:49.404 [org.apache.kafka.common.utils.AppInfoParser] INFO  Kafka startTimeMs: 1589509249402 [main]
+2020-05-15 10:20:49.630 [org.apache.kafka.clients.consumer.ConsumerConfig] INFO  ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = latest
+	bootstrap.servers = [192.168.10.109:9092]
+	check.crcs = true
+	client.dns.lookup = default
+	client.id = 
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = spring-boot-demo
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	session.timeout.ms = 60000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = https
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+ [main]
+2020-05-15 10:20:49.665 [org.apache.kafka.common.utils.AppInfoParser] INFO  Kafka version: 2.3.1 [main]
+2020-05-15 10:20:49.665 [org.apache.kafka.common.utils.AppInfoParser] INFO  Kafka commitId: 18a913733fb71c01 [main]
+2020-05-15 10:20:49.665 [org.apache.kafka.common.utils.AppInfoParser] INFO  Kafka startTimeMs: 1589509249665 [main]
+2020-05-15 10:20:49.666 [org.apache.kafka.clients.consumer.KafkaConsumer] INFO  [Consumer clientId=consumer-1, groupId=spring-boot-demo] Subscribed to topic(s): test1 [main]
+2020-05-15 10:20:49.668 [org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler] INFO  Initializing ExecutorService [main]
+2020-05-15 10:20:49.672 [org.springframework.amqp.rabbit.connection.CachingConnectionFactory] INFO  Attempting to connect to: [192.168.0.41:5672] [main]
+2020-05-15 10:20:49.688 [org.apache.kafka.clients.Metadata] INFO  [Consumer clientId=consumer-1, groupId=spring-boot-demo] Cluster ID: ouEtIML3Ssu4cSL1qjC-wg [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]
+2020-05-15 10:20:49.689 [org.apache.kafka.clients.consumer.internals.AbstractCoordinator] INFO  [Consumer clientId=consumer-1, groupId=spring-boot-demo] Discovered group coordinator 192.168.10.109:9092 (id: 2147483646 rack: null) [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]
+2020-05-15 10:20:49.691 [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator] INFO  [Consumer clientId=consumer-1, groupId=spring-boot-demo] Revoking previously assigned partitions [] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]
+2020-05-15 10:20:49.692 [org.springframework.kafka.listener.KafkaMessageListenerContainer] INFO  spring-boot-demo: partitions revoked: [] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]
+2020-05-15 10:20:49.692 [org.apache.kafka.clients.consumer.internals.AbstractCoordinator] INFO  [Consumer clientId=consumer-1, groupId=spring-boot-demo] (Re-)joining group [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]
+2020-05-15 10:20:49.736 [org.springframework.amqp.rabbit.connection.CachingConnectionFactory] INFO  Created new connection: rabbitConnectionFactory#7c781c42:0/SimpleConnection@515ab3f2 [delegate=amqp://admin@192.168.0.41:5672/, localPort= 54533] [main]
+2020-05-15 10:20:49.781 [cn.citms.dataaccessserver.mq.RabbitmqApplicationTests] INFO  Started RabbitmqApplicationTests in 3.942 seconds (JVM running for 4.86) [main]
+2020-05-15 10:20:50.000 [org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer] INFO  Waiting for workers to finish. [SpringContextShutdownHook]
+2020-05-15 10:20:50.777 [org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer] INFO  Successfully waited for workers to finish. [SpringContextShutdownHook]
+2020-05-15 10:20:50.779 [org.apache.kafka.clients.consumer.KafkaConsumer] INFO  [Consumer clientId=consumer-1, groupId=spring-boot-demo] Unsubscribed all topics or patterns and assigned partitions [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]
+2020-05-15 10:20:50.779 [org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler] INFO  Shutting down ExecutorService [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]
+2020-05-15 10:21:20.780 [org.springframework.context.support.DefaultLifecycleProcessor] INFO  Failed to shut down 1 bean with phase value 2147483547 within timeout of 30000: [org.springframework.kafka.config.internalKafkaListenerEndpointRegistry] [SpringContextShutdownHook]
+2020-05-15 10:21:20.781 [org.apache.kafka.clients.consumer.internals.AbstractCoordinator] WARN  [Consumer clientId=consumer-1, groupId=spring-boot-demo] Close timed out with 1 pending requests to coordinator, terminating client connections [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]
+2020-05-15 10:21:20.782 [org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer] INFO  Shutdown ignored - container is not active already [SpringContextShutdownHook]
+2020-05-15 10:21:20.782 [org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor] INFO  Shutting down ExecutorService 'applicationTaskExecutor' [SpringContextShutdownHook]
+2020-05-15 10:21:20.783 [org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer] INFO  spring-boot-demo: Consumer stopped [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]
+2020-05-15 10:21:30.484 [cn.citms.dataaccessserver.mq.RabbitmqApplicationTests] INFO  Starting RabbitmqApplicationTests on DESKTOP-E039QA7 with PID 15232 (started by DELL in D:\IdeaProjects\DataAccessService\blade-service\citms-dataaccess-server-facealarm) [main]
+2020-05-15 10:21:30.485 [cn.citms.dataaccessserver.mq.RabbitmqApplicationTests] INFO  The following profiles are active: dev [main]
+2020-05-15 10:21:32.651 [org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor] INFO  Initializing ExecutorService 'applicationTaskExecutor' [main]
+2020-05-15 10:21:33.111 [org.apache.kafka.clients.admin.AdminClientConfig] INFO  AdminClientConfig values: 
+	bootstrap.servers = [192.168.10.109:9092]
+	client.dns.lookup = default
+	client.id = 
+	connections.max.idle.ms = 300000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 120000
+	retries = 5
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = https
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+ [main]
+2020-05-15 10:21:33.183 [org.apache.kafka.common.utils.AppInfoParser] INFO  Kafka version: 2.3.1 [main]
+2020-05-15 10:21:33.184 [org.apache.kafka.common.utils.AppInfoParser] INFO  Kafka commitId: 18a913733fb71c01 [main]
+2020-05-15 10:21:33.184 [org.apache.kafka.common.utils.AppInfoParser] INFO  Kafka startTimeMs: 1589509293182 [main]
+2020-05-15 10:21:33.330 [org.apache.kafka.clients.consumer.ConsumerConfig] INFO  ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = latest
+	bootstrap.servers = [192.168.10.109:9092]
+	check.crcs = true
+	client.dns.lookup = default
+	client.id = 
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = spring-boot-demo
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	session.timeout.ms = 60000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = https
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+ [main]
+2020-05-15 10:21:33.362 [org.apache.kafka.common.utils.AppInfoParser] INFO  Kafka version: 2.3.1 [main]
+2020-05-15 10:21:33.362 [org.apache.kafka.common.utils.AppInfoParser] INFO  Kafka commitId: 18a913733fb71c01 [main]
+2020-05-15 10:21:33.362 [org.apache.kafka.common.utils.AppInfoParser] INFO  Kafka startTimeMs: 1589509293362 [main]
+2020-05-15 10:21:33.363 [org.apache.kafka.clients.consumer.KafkaConsumer] INFO  [Consumer clientId=consumer-1, groupId=spring-boot-demo] Subscribed to topic(s): test1 [main]
+2020-05-15 10:21:33.364 [org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler] INFO  Initializing ExecutorService [main]
+2020-05-15 10:21:33.368 [org.springframework.amqp.rabbit.connection.CachingConnectionFactory] INFO  Attempting to connect to: [192.168.0.41:5672] [main]
+2020-05-15 10:21:33.378 [org.apache.kafka.clients.Metadata] INFO  [Consumer clientId=consumer-1, groupId=spring-boot-demo] Cluster ID: ouEtIML3Ssu4cSL1qjC-wg [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]
+2020-05-15 10:21:33.379 [org.apache.kafka.clients.consumer.internals.AbstractCoordinator] INFO  [Consumer clientId=consumer-1, groupId=spring-boot-demo] Discovered group coordinator 192.168.10.109:9092 (id: 2147483646 rack: null) [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]
+2020-05-15 10:21:33.381 [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator] INFO  [Consumer clientId=consumer-1, groupId=spring-boot-demo] Revoking previously assigned partitions [] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]
+2020-05-15 10:21:33.381 [org.springframework.kafka.listener.KafkaMessageListenerContainer] INFO  spring-boot-demo: partitions revoked: [] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]
+2020-05-15 10:21:33.381 [org.apache.kafka.clients.consumer.internals.AbstractCoordinator] INFO  [Consumer clientId=consumer-1, groupId=spring-boot-demo] (Re-)joining group [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]
+2020-05-15 10:21:33.416 [org.springframework.amqp.rabbit.connection.CachingConnectionFactory] INFO  Created new connection: rabbitConnectionFactory#109d724c:0/SimpleConnection@671d1157 [delegate=amqp://admin@192.168.0.41:5672/, localPort= 54565] [main]
+2020-05-15 10:21:33.459 [cn.citms.dataaccessserver.mq.RabbitmqApplicationTests] INFO  Started RabbitmqApplicationTests in 3.356 seconds (JVM running for 4.046) [main]
+2020-05-15 10:21:33.620 [org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer] INFO  Waiting for workers to finish. [SpringContextShutdownHook]
+2020-05-15 10:21:34.455 [org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer] INFO  Successfully waited for workers to finish. [SpringContextShutdownHook]
+2020-05-15 10:21:34.458 [org.apache.kafka.clients.consumer.KafkaConsumer] INFO  [Consumer clientId=consumer-1, groupId=spring-boot-demo] Unsubscribed all topics or patterns and assigned partitions [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]
+2020-05-15 10:21:34.458 [org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler] INFO  Shutting down ExecutorService [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]
+2020-05-15 10:21:36.816 [org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer] INFO  spring-boot-demo: Consumer stopped [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]
+2020-05-15 10:21:36.819 [org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer] INFO  Shutdown ignored - container is not active already [SpringContextShutdownHook]
+2020-05-15 10:21:36.819 [org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor] INFO  Shutting down ExecutorService 'applicationTaskExecutor' [SpringContextShutdownHook]
+2020-05-15 10:21:47.273 [cn.citms.dataaccessserver.mq.RabbitmqApplicationTests] INFO  Starting RabbitmqApplicationTests on DESKTOP-E039QA7 with PID 12432 (started by DELL in D:\IdeaProjects\DataAccessService\blade-service\citms-dataaccess-server-facealarm) [main]
+2020-05-15 10:21:47.274 [cn.citms.dataaccessserver.mq.RabbitmqApplicationTests] INFO  The following profiles are active: dev [main]
+2020-05-15 10:21:49.688 [org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor] INFO  Initializing ExecutorService 'applicationTaskExecutor' [main]
+2020-05-15 10:21:50.140 [org.apache.kafka.clients.admin.AdminClientConfig] INFO  AdminClientConfig values: 
+	bootstrap.servers = [192.168.10.109:9092]
+	client.dns.lookup = default
+	client.id = 
+	connections.max.idle.ms = 300000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 120000
+	retries = 5
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = https
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+ [main]
+2020-05-15 10:21:50.222 [org.apache.kafka.common.utils.AppInfoParser] INFO  Kafka version: 2.3.1 [main]
+2020-05-15 10:21:50.223 [org.apache.kafka.common.utils.AppInfoParser] INFO  Kafka commitId: 18a913733fb71c01 [main]
+2020-05-15 10:21:50.224 [org.apache.kafka.common.utils.AppInfoParser] INFO  Kafka startTimeMs: 1589509310221 [main]
+2020-05-15 10:21:50.419 [org.apache.kafka.clients.consumer.ConsumerConfig] INFO  ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = latest
+	bootstrap.servers = [192.168.10.109:9092]
+	check.crcs = true
+	client.dns.lookup = default
+	client.id = 
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = spring-boot-demo
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	session.timeout.ms = 60000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = https
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+ [main]
+2020-05-15 10:21:50.462 [org.apache.kafka.common.utils.AppInfoParser] INFO  Kafka version: 2.3.1 [main]
+2020-05-15 10:21:50.462 [org.apache.kafka.common.utils.AppInfoParser] INFO  Kafka commitId: 18a913733fb71c01 [main]
+2020-05-15 10:21:50.462 [org.apache.kafka.common.utils.AppInfoParser] INFO  Kafka startTimeMs: 1589509310462 [main]
+2020-05-15 10:21:50.463 [org.apache.kafka.clients.consumer.KafkaConsumer] INFO  [Consumer clientId=consumer-1, groupId=spring-boot-demo] Subscribed to topic(s): test1 [main]
+2020-05-15 10:21:50.465 [org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler] INFO  Initializing ExecutorService [main]
+2020-05-15 10:21:50.471 [org.springframework.amqp.rabbit.connection.CachingConnectionFactory] INFO  Attempting to connect to: [192.168.0.41:5672] [main]
+2020-05-15 10:21:50.493 [org.apache.kafka.clients.Metadata] INFO  [Consumer clientId=consumer-1, groupId=spring-boot-demo] Cluster ID: ouEtIML3Ssu4cSL1qjC-wg [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]
+2020-05-15 10:21:50.494 [org.apache.kafka.clients.consumer.internals.AbstractCoordinator] INFO  [Consumer clientId=consumer-1, groupId=spring-boot-demo] Discovered group coordinator 192.168.10.109:9092 (id: 2147483646 rack: null) [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]
+2020-05-15 10:21:50.496 [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator] INFO  [Consumer clientId=consumer-1, groupId=spring-boot-demo] Revoking previously assigned partitions [] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]
+2020-05-15 10:21:50.497 [org.springframework.kafka.listener.KafkaMessageListenerContainer] INFO  spring-boot-demo: partitions revoked: [] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]
+2020-05-15 10:21:50.497 [org.apache.kafka.clients.consumer.internals.AbstractCoordinator] INFO  [Consumer clientId=consumer-1, groupId=spring-boot-demo] (Re-)joining group [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]
+2020-05-15 10:21:50.536 [org.springframework.amqp.rabbit.connection.CachingConnectionFactory] INFO  Created new connection: rabbitConnectionFactory#7d979d34:0/SimpleConnection@18ffca6c [delegate=amqp://admin@192.168.0.41:5672/, localPort= 54588] [main]
+2020-05-15 10:21:50.585 [cn.citms.dataaccessserver.mq.RabbitmqApplicationTests] INFO  Started RabbitmqApplicationTests in 3.892 seconds (JVM running for 4.736) [main]
+2020-05-15 10:21:50.813 [org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer] INFO  Waiting for workers to finish. [SpringContextShutdownHook]
+2020-05-15 10:21:51.580 [org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer] INFO  Successfully waited for workers to finish. [SpringContextShutdownHook]
+2020-05-15 10:21:51.582 [org.apache.kafka.clients.consumer.KafkaConsumer] INFO  [Consumer clientId=consumer-1, groupId=spring-boot-demo] Unsubscribed all topics or patterns and assigned partitions [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]
+2020-05-15 10:21:51.583 [org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler] INFO  Shutting down ExecutorService [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]
+2020-05-15 10:22:42.573 [cn.citms.dataaccessserver.mq.RabbitmqApplicationTests] INFO  Starting RabbitmqApplicationTests on DESKTOP-E039QA7 with PID 1536 (started by DELL in D:\IdeaProjects\DataAccessService\blade-service\citms-dataaccess-server-facealarm) [main]
+2020-05-15 10:22:42.574 [cn.citms.dataaccessserver.mq.RabbitmqApplicationTests] INFO  The following profiles are active: dev [main]
+2020-05-15 10:22:45.044 [org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor] INFO  Initializing ExecutorService 'applicationTaskExecutor' [main]
+2020-05-15 10:22:45.406 [org.apache.kafka.clients.admin.AdminClientConfig] INFO  AdminClientConfig values: 
+	bootstrap.servers = [192.168.10.109:9092]
+	client.dns.lookup = default
+	client.id = 
+	connections.max.idle.ms = 300000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 120000
+	retries = 5
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = https
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+ [main]
+2020-05-15 10:22:45.470 [org.apache.kafka.common.utils.AppInfoParser] INFO  Kafka version: 2.3.1 [main]
+2020-05-15 10:22:45.471 [org.apache.kafka.common.utils.AppInfoParser] INFO  Kafka commitId: 18a913733fb71c01 [main]
+2020-05-15 10:22:45.472 [org.apache.kafka.common.utils.AppInfoParser] INFO  Kafka startTimeMs: 1589509365469 [main]
+2020-05-15 10:22:45.603 [org.apache.kafka.clients.consumer.ConsumerConfig] INFO  ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = latest
+	bootstrap.servers = [192.168.10.109:9092]
+	check.crcs = true
+	client.dns.lookup = default
+	client.id = 
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = spring-boot-demo
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	session.timeout.ms = 60000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = https
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+ [main]
+2020-05-15 10:22:45.629 [org.apache.kafka.common.utils.AppInfoParser] INFO  Kafka version: 2.3.1 [main]
+2020-05-15 10:22:45.629 [org.apache.kafka.common.utils.AppInfoParser] INFO  Kafka commitId: 18a913733fb71c01 [main]
+2020-05-15 10:22:45.629 [org.apache.kafka.common.utils.AppInfoParser] INFO  Kafka startTimeMs: 1589509365629 [main]
+2020-05-15 10:22:45.630 [org.apache.kafka.clients.consumer.KafkaConsumer] INFO  [Consumer clientId=consumer-1, groupId=spring-boot-demo] Subscribed to topic(s): test1 [main]
+2020-05-15 10:22:45.631 [org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler] INFO  Initializing ExecutorService [main]
+2020-05-15 10:22:45.636 [org.springframework.amqp.rabbit.connection.CachingConnectionFactory] INFO  Attempting to connect to: [192.168.0.41:5672] [main]
+2020-05-15 10:22:45.651 [org.apache.kafka.clients.Metadata] INFO  [Consumer clientId=consumer-1, groupId=spring-boot-demo] Cluster ID: ouEtIML3Ssu4cSL1qjC-wg [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]
+2020-05-15 10:22:45.652 [org.apache.kafka.clients.consumer.internals.AbstractCoordinator] INFO  [Consumer clientId=consumer-1, groupId=spring-boot-demo] Discovered group coordinator 192.168.10.109:9092 (id: 2147483646 rack: null) [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]
+2020-05-15 10:22:45.653 [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator] INFO  [Consumer clientId=consumer-1, groupId=spring-boot-demo] Revoking previously assigned partitions [] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]
+2020-05-15 10:22:45.653 [org.springframework.kafka.listener.KafkaMessageListenerContainer] INFO  spring-boot-demo: partitions revoked: [] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]
+2020-05-15 10:22:45.654 [org.apache.kafka.clients.consumer.internals.AbstractCoordinator] INFO  [Consumer clientId=consumer-1, groupId=spring-boot-demo] (Re-)joining group [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]
+2020-05-15 10:22:45.680 [org.springframework.amqp.rabbit.connection.CachingConnectionFactory] INFO  Created new connection: rabbitConnectionFactory#7c6442c2:0/SimpleConnection@58ba5b30 [delegate=amqp://admin@192.168.0.41:5672/, localPort= 54649] [main]
+2020-05-15 10:22:45.722 [cn.citms.dataaccessserver.mq.RabbitmqApplicationTests] INFO  Started RabbitmqApplicationTests in 3.561 seconds (JVM running for 4.296) [main]
+2020-05-15 10:22:45.871 [org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer] INFO  Waiting for workers to finish. [SpringContextShutdownHook]
+2020-05-15 10:22:46.721 [org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer] INFO  Successfully waited for workers to finish. [SpringContextShutdownHook]
+2020-05-15 10:22:46.723 [org.apache.kafka.clients.consumer.KafkaConsumer] INFO  [Consumer clientId=consumer-1, groupId=spring-boot-demo] Unsubscribed all topics or patterns and assigned partitions [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]
+2020-05-15 10:22:46.723 [org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler] INFO  Shutting down ExecutorService [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]
+2020-05-15 10:23:16.724 [org.springframework.context.support.DefaultLifecycleProcessor] INFO  Failed to shut down 1 bean with phase value 2147483547 within timeout of 30000: [org.springframework.kafka.config.internalKafkaListenerEndpointRegistry] [SpringContextShutdownHook]
+2020-05-15 10:23:16.725 [org.apache.kafka.clients.consumer.internals.AbstractCoordinator] WARN  [Consumer clientId=consumer-1, groupId=spring-boot-demo] Close timed out with 1 pending requests to coordinator, terminating client connections [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]
+2020-05-15 10:23:16.727 [org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer] INFO  Shutdown ignored - container is not active already [SpringContextShutdownHook]
+2020-05-15 10:23:16.729 [org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor] INFO  Shutting down ExecutorService 'applicationTaskExecutor' [SpringContextShutdownHook]
+2020-05-15 10:23:16.729 [org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer] INFO  spring-boot-demo: Consumer stopped [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]
+2020-05-15 10:25:36.866 [cn.citms.dataaccessserver.mq.RabbitmqApplicationTests] INFO  Starting RabbitmqApplicationTests on DESKTOP-E039QA7 with PID 17264 (started by DELL in D:\IdeaProjects\DataAccessService\blade-service\citms-dataaccess-server-facealarm) [main]
+2020-05-15 10:25:36.866 [cn.citms.dataaccessserver.mq.RabbitmqApplicationTests] INFO  The following profiles are active: dev [main]
+2020-05-15 10:25:39.174 [org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor] INFO  Initializing ExecutorService 'applicationTaskExecutor' [main]
+2020-05-15 10:25:39.561 [org.apache.kafka.clients.admin.AdminClientConfig] INFO  AdminClientConfig values: 
+	bootstrap.servers = [192.168.10.109:9092]
+	client.dns.lookup = default
+	client.id = 
+	connections.max.idle.ms = 300000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 120000
+	retries = 5
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = https
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+ [main]
+2020-05-15 10:25:39.621 [org.apache.kafka.common.utils.AppInfoParser] INFO  Kafka version: 2.3.1 [main]
+2020-05-15 10:25:39.622 [org.apache.kafka.common.utils.AppInfoParser] INFO  Kafka commitId: 18a913733fb71c01 [main]
+2020-05-15 10:25:39.622 [org.apache.kafka.common.utils.AppInfoParser] INFO  Kafka startTimeMs: 1589509539620 [main]
+2020-05-15 10:25:39.762 [org.apache.kafka.clients.consumer.ConsumerConfig] INFO  ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = latest
+	bootstrap.servers = [192.168.10.109:9092]
+	check.crcs = true
+	client.dns.lookup = default
+	client.id = 
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = spring-boot-demo
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	session.timeout.ms = 60000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = https
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+ [main]
+2020-05-15 10:25:39.788 [org.apache.kafka.common.utils.AppInfoParser] INFO  Kafka version: 2.3.1 [main]
+2020-05-15 10:25:39.788 [org.apache.kafka.common.utils.AppInfoParser] INFO  Kafka commitId: 18a913733fb71c01 [main]
+2020-05-15 10:25:39.788 [org.apache.kafka.common.utils.AppInfoParser] INFO  Kafka startTimeMs: 1589509539788 [main]
+2020-05-15 10:25:39.789 [org.apache.kafka.clients.consumer.KafkaConsumer] INFO  [Consumer clientId=consumer-1, groupId=spring-boot-demo] Subscribed to topic(s): test1 [main]
+2020-05-15 10:25:39.790 [org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler] INFO  Initializing ExecutorService [main]
+2020-05-15 10:25:39.793 [org.springframework.amqp.rabbit.connection.CachingConnectionFactory] INFO  Attempting to connect to: [192.168.0.41:5672] [main]
+2020-05-15 10:25:39.803 [org.apache.kafka.clients.Metadata] INFO  [Consumer clientId=consumer-1, groupId=spring-boot-demo] Cluster ID: ouEtIML3Ssu4cSL1qjC-wg [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]
+2020-05-15 10:25:39.804 [org.apache.kafka.clients.consumer.internals.AbstractCoordinator] INFO  [Consumer clientId=consumer-1, groupId=spring-boot-demo] Discovered group coordinator 192.168.10.109:9092 (id: 2147483646 rack: null) [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]
+2020-05-15 10:25:39.806 [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator] INFO  [Consumer clientId=consumer-1, groupId=spring-boot-demo] Revoking previously assigned partitions [] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]
+2020-05-15 10:25:39.806 [org.springframework.kafka.listener.KafkaMessageListenerContainer] INFO  spring-boot-demo: partitions revoked: [] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]
+2020-05-15 10:25:39.807 [org.apache.kafka.clients.consumer.internals.AbstractCoordinator] INFO  [Consumer clientId=consumer-1, groupId=spring-boot-demo] (Re-)joining group [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]
+2020-05-15 10:25:39.836 [org.springframework.amqp.rabbit.connection.CachingConnectionFactory] INFO  Created new connection: rabbitConnectionFactory#109d724c:0/SimpleConnection@671d1157 [delegate=amqp://admin@192.168.0.41:5672/, localPort= 54756] [main]
+2020-05-15 10:25:39.872 [cn.citms.dataaccessserver.mq.RabbitmqApplicationTests] INFO  Started RabbitmqApplicationTests in 3.39 seconds (JVM running for 4.143) [main]
+2020-05-15 10:25:40.095 [org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer] INFO  Waiting for workers to finish. [SpringContextShutdownHook]
+2020-05-15 10:25:40.871 [org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer] INFO  Successfully waited for workers to finish. [SpringContextShutdownHook]
+2020-05-15 10:25:40.872 [org.apache.kafka.clients.consumer.KafkaConsumer] INFO  [Consumer clientId=consumer-1, groupId=spring-boot-demo] Unsubscribed all topics or patterns and assigned partitions [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]
+2020-05-15 10:25:40.873 [org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler] INFO  Shutting down ExecutorService [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]
+2020-05-15 10:26:10.873 [org.apache.kafka.clients.consumer.internals.AbstractCoordinator] WARN  [Consumer clientId=consumer-1, groupId=spring-boot-demo] Close timed out with 1 pending requests to coordinator, terminating client connections [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]
+2020-05-15 10:26:10.874 [org.springframework.context.support.DefaultLifecycleProcessor] INFO  Failed to shut down 1 bean with phase value 2147483547 within timeout of 30000: [org.springframework.kafka.config.internalKafkaListenerEndpointRegistry] [SpringContextShutdownHook]
+2020-05-15 10:26:10.876 [org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer] INFO  spring-boot-demo: Consumer stopped [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]
+2020-05-15 10:26:10.877 [org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer] INFO  Shutdown ignored - container is not active already [SpringContextShutdownHook]
+2020-05-15 10:26:10.877 [org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor] INFO  Shutting down ExecutorService 'applicationTaskExecutor' [SpringContextShutdownHook]
+2020-05-15 10:31:10.516 [cn.citms.dataaccessserver.mq.RabbitmqApplicationTests] INFO  Starting RabbitmqApplicationTests on DESKTOP-E039QA7 with PID 17136 (started by DELL in D:\IdeaProjects\DataAccessService\blade-service\citms-dataaccess-server-facealarm) [main]
+2020-05-15 10:31:10.517 [cn.citms.dataaccessserver.mq.RabbitmqApplicationTests] INFO  The following profiles are active: dev [main]
+2020-05-15 10:31:12.704 [org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor] INFO  Initializing ExecutorService 'applicationTaskExecutor' [main]
+2020-05-15 10:31:13.119 [org.apache.kafka.clients.admin.AdminClientConfig] INFO  AdminClientConfig values: 
+	bootstrap.servers = [192.168.10.109:9092]
+	client.dns.lookup = default
+	client.id = 
+	connections.max.idle.ms = 300000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 120000
+	retries = 5
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = https
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+ [main]
+2020-05-15 10:31:13.182 [org.apache.kafka.common.utils.AppInfoParser] INFO  Kafka version: 2.3.1 [main]
+2020-05-15 10:31:13.183 [org.apache.kafka.common.utils.AppInfoParser] INFO  Kafka commitId: 18a913733fb71c01 [main]
+2020-05-15 10:31:13.183 [org.apache.kafka.common.utils.AppInfoParser] INFO  Kafka startTimeMs: 1589509873181 [main]
+2020-05-15 10:31:13.324 [org.apache.kafka.clients.consumer.ConsumerConfig] INFO  ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = latest
+	bootstrap.servers = [192.168.10.109:9092]
+	check.crcs = true
+	client.dns.lookup = default
+	client.id = 
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = spring-boot-demo
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	session.timeout.ms = 60000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = https
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+ [main]
+2020-05-15 10:31:13.353 [org.apache.kafka.common.utils.AppInfoParser] INFO  Kafka version: 2.3.1 [main]
+2020-05-15 10:31:13.353 [org.apache.kafka.common.utils.AppInfoParser] INFO  Kafka commitId: 18a913733fb71c01 [main]
+2020-05-15 10:31:13.353 [org.apache.kafka.common.utils.AppInfoParser] INFO  Kafka startTimeMs: 1589509873353 [main]
+2020-05-15 10:31:13.354 [org.apache.kafka.clients.consumer.KafkaConsumer] INFO  [Consumer clientId=consumer-1, groupId=spring-boot-demo] Subscribed to topic(s): test1 [main]
+2020-05-15 10:31:13.355 [org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler] INFO  Initializing ExecutorService [main]
+2020-05-15 10:31:13.359 [org.springframework.amqp.rabbit.connection.CachingConnectionFactory] INFO  Attempting to connect to: [192.168.0.41:5672] [main]
+2020-05-15 10:31:13.374 [org.apache.kafka.clients.Metadata] INFO  [Consumer clientId=consumer-1, groupId=spring-boot-demo] Cluster ID: ouEtIML3Ssu4cSL1qjC-wg [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]
+2020-05-15 10:31:13.375 [org.apache.kafka.clients.consumer.internals.AbstractCoordinator] INFO  [Consumer clientId=consumer-1, groupId=spring-boot-demo] Discovered group coordinator 192.168.10.109:9092 (id: 2147483646 rack: null) [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]
+2020-05-15 10:31:13.376 [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator] INFO  [Consumer clientId=consumer-1, groupId=spring-boot-demo] Revoking previously assigned partitions [] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]
+2020-05-15 10:31:13.376 [org.springframework.kafka.listener.KafkaMessageListenerContainer] INFO  spring-boot-demo: partitions revoked: [] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]
+2020-05-15 10:31:13.376 [org.apache.kafka.clients.consumer.internals.AbstractCoordinator] INFO  [Consumer clientId=consumer-1, groupId=spring-boot-demo] (Re-)joining group [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]
+2020-05-15 10:31:13.404 [org.springframework.amqp.rabbit.connection.CachingConnectionFactory] INFO  Created new connection: rabbitConnectionFactory#769a58e5:0/SimpleConnection@58f39564 [delegate=amqp://admin@192.168.0.41:5672/, localPort= 54910] [main]
+2020-05-15 10:31:13.443 [cn.citms.dataaccessserver.mq.RabbitmqApplicationTests] INFO  Started RabbitmqApplicationTests in 3.31 seconds (JVM running for 4.013) [main]
+2020-05-15 10:31:13.658 [org.springframework.amqp.rabbit.connection.CachingConnectionFactory] ERROR Channel shutdown: channel error; protocol method: #method<channel.close>(reply-code=404, reply-text=NOT_FOUND - no exchange 'xg-order' in vhost '/', class-id=60, method-id=40) [AMQP Connection 192.168.0.41:5672]
+2020-05-15 10:31:13.678 [org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer] INFO  Waiting for workers to finish. [SpringContextShutdownHook]
+2020-05-15 10:31:14.319 [org.apache.kafka.clients.consumer.internals.AbstractCoordinator] INFO  [Consumer clientId=consumer-1, groupId=spring-boot-demo] Successfully joined group with generation 84 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]
+2020-05-15 10:31:14.322 [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator] INFO  [Consumer clientId=consumer-1, groupId=spring-boot-demo] Setting newly assigned partitions: test1-0 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]
+2020-05-15 10:31:14.329 [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator] INFO  [Consumer clientId=consumer-1, groupId=spring-boot-demo] Setting offset for partition test1-0 to the committed offset FetchPosition{offset=4, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=192.168.10.109:9092 (id: 1 rack: null), epoch=-1}} [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]
+2020-05-15 10:31:14.335 [org.springframework.kafka.listener.KafkaMessageListenerContainer] INFO  spring-boot-demo: partitions assigned: [test1-0] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]
+2020-05-15 10:31:14.439 [org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer] INFO  Successfully waited for workers to finish. [SpringContextShutdownHook]
+2020-05-15 10:31:14.440 [org.apache.kafka.clients.consumer.internals.AbstractCoordinator] INFO  [Consumer clientId=consumer-1, groupId=spring-boot-demo] Member consumer-1-85c77fd8-2b06-488e-99bc-b4aca3cb4aab sending LeaveGroup request to coordinator 192.168.10.109:9092 (id: 2147483646 rack: null) [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]
+2020-05-15 10:31:14.441 [org.apache.kafka.clients.consumer.KafkaConsumer] INFO  [Consumer clientId=consumer-1, groupId=spring-boot-demo] Unsubscribed all topics or patterns and assigned partitions [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]
+2020-05-15 10:31:14.441 [org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler] INFO  Shutting down ExecutorService [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]
+2020-05-15 10:31:14.447 [org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer] INFO  spring-boot-demo: Consumer stopped [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]
+2020-05-15 10:31:14.450 [org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer] INFO  Shutdown ignored - container is not active already [SpringContextShutdownHook]
+2020-05-15 10:31:14.450 [org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor] INFO  Shutting down ExecutorService 'applicationTaskExecutor' [SpringContextShutdownHook]
+2020-05-15 14:39:15.493 [cn.citms.dataaccessserver.mq.RabbitmqApplicationTests] INFO  Starting RabbitmqApplicationTests on DESKTOP-E039QA7 with PID 15996 (started by DELL in D:\IdeaProjects\DataAccessService\blade-service\citms-dataaccess-server-facealarm) [main]
+2020-05-15 14:39:15.498 [cn.citms.dataaccessserver.mq.RabbitmqApplicationTests] INFO  The following profiles are active: dev [main]
+2020-05-15 14:39:18.060 [org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor] INFO  Initializing ExecutorService 'applicationTaskExecutor' [main]
+2020-05-15 14:39:18.569 [org.apache.kafka.clients.admin.AdminClientConfig] INFO  AdminClientConfig values: 
+	bootstrap.servers = [192.168.10.109:9092]
+	client.dns.lookup = default
+	client.id = 
+	connections.max.idle.ms = 300000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 120000
+	retries = 5
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = https
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+ [main]
+2020-05-15 14:39:18.707 [org.apache.kafka.common.utils.AppInfoParser] INFO  Kafka version: 2.3.1 [main]
+2020-05-15 14:39:18.716 [org.apache.kafka.common.utils.AppInfoParser] INFO  Kafka commitId: 18a913733fb71c01 [main]
+2020-05-15 14:39:18.716 [org.apache.kafka.common.utils.AppInfoParser] INFO  Kafka startTimeMs: 1589524758706 [main]
+2020-05-15 14:39:18.982 [org.apache.kafka.clients.consumer.ConsumerConfig] INFO  ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = latest
+	bootstrap.servers = [192.168.10.109:9092]
+	check.crcs = true
+	client.dns.lookup = default
+	client.id = 
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = spring-boot-demo
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	session.timeout.ms = 60000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = https
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+ [main]
+2020-05-15 14:39:19.017 [org.apache.kafka.common.utils.AppInfoParser] INFO  Kafka version: 2.3.1 [main]
+2020-05-15 14:39:19.017 [org.apache.kafka.common.utils.AppInfoParser] INFO  Kafka commitId: 18a913733fb71c01 [main]
+2020-05-15 14:39:19.017 [org.apache.kafka.common.utils.AppInfoParser] INFO  Kafka startTimeMs: 1589524759017 [main]
+2020-05-15 14:39:19.019 [org.apache.kafka.clients.consumer.KafkaConsumer] INFO  [Consumer clientId=consumer-1, groupId=spring-boot-demo] Subscribed to topic(s): test1 [main]
+2020-05-15 14:39:19.021 [org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler] INFO  Initializing ExecutorService [main]
+2020-05-15 14:39:19.026 [org.springframework.amqp.rabbit.connection.CachingConnectionFactory] INFO  Attempting to connect to: [192.168.0.41:5672] [main]
+2020-05-15 14:39:19.048 [org.apache.kafka.clients.Metadata] INFO  [Consumer clientId=consumer-1, groupId=spring-boot-demo] Cluster ID: ouEtIML3Ssu4cSL1qjC-wg [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]
+2020-05-15 14:39:19.049 [org.apache.kafka.clients.consumer.internals.AbstractCoordinator] INFO  [Consumer clientId=consumer-1, groupId=spring-boot-demo] Discovered group coordinator 192.168.10.109:9092 (id: 2147483646 rack: null) [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]
+2020-05-15 14:39:19.052 [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator] INFO  [Consumer clientId=consumer-1, groupId=spring-boot-demo] Revoking previously assigned partitions [] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]
+2020-05-15 14:39:19.052 [org.springframework.kafka.listener.KafkaMessageListenerContainer] INFO  spring-boot-demo: partitions revoked: [] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]
+2020-05-15 14:39:19.052 [org.apache.kafka.clients.consumer.internals.AbstractCoordinator] INFO  [Consumer clientId=consumer-1, groupId=spring-boot-demo] (Re-)joining group [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]
+2020-05-15 14:39:19.102 [org.springframework.amqp.rabbit.connection.CachingConnectionFactory] INFO  Created new connection: rabbitConnectionFactory#53c1179a:0/SimpleConnection@1df9186f [delegate=amqp://admin@192.168.0.41:5672/, localPort= 63972] [main]
+2020-05-15 14:39:19.152 [cn.citms.dataaccessserver.mq.RabbitmqApplicationTests] INFO  Started RabbitmqApplicationTests in 4.477 seconds (JVM running for 5.548) [main]
+2020-05-15 14:39:19.692 [cn.citms.dataaccessserver.handler.RabbitMqHandler] INFO  接受到mq数据》》》》》：{"name":"测试创建订单","messageId":"1589524759567$3c88fd84-1eae-453a-8135-25f0ed6fa75b","id":"201905200000002"} [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2]
+2020-05-15 14:39:19.694 [org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer] INFO  Waiting for workers to finish. [SpringContextShutdownHook]
+2020-05-15 14:39:20.149 [org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer] INFO  Successfully waited for workers to finish. [SpringContextShutdownHook]
+2020-05-15 14:39:20.151 [org.apache.kafka.clients.consumer.KafkaConsumer] INFO  [Consumer clientId=consumer-1, groupId=spring-boot-demo] Unsubscribed all topics or patterns and assigned partitions [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]
+2020-05-15 14:39:20.151 [org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler] INFO  Shutting down ExecutorService [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]
+2020-05-15 14:39:39.012 [cn.citms.dataaccessserver.config.kafka.KafkaApplicationTests] INFO  Starting KafkaApplicationTests on DESKTOP-E039QA7 with PID 18532 (started by DELL in D:\IdeaProjects\DataAccessService\blade-service\citms-dataaccess-server-facealarm) [main]
+2020-05-15 14:39:39.013 [cn.citms.dataaccessserver.config.kafka.KafkaApplicationTests] INFO  The following profiles are active: dev [main]
+2020-05-15 14:39:41.274 [org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor] INFO  Initializing ExecutorService 'applicationTaskExecutor' [main]
+2020-05-15 14:39:41.647 [org.apache.kafka.clients.admin.AdminClientConfig] INFO  AdminClientConfig values: 
+	bootstrap.servers = [192.168.10.109:9092]
+	client.dns.lookup = default
+	client.id = 
+	connections.max.idle.ms = 300000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 120000
+	retries = 5
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = https
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+ [main]
+2020-05-15 14:39:41.712 [org.apache.kafka.common.utils.AppInfoParser] INFO  Kafka version: 2.3.1 [main]
+2020-05-15 14:39:41.713 [org.apache.kafka.common.utils.AppInfoParser] INFO  Kafka commitId: 18a913733fb71c01 [main]
+2020-05-15 14:39:41.714 [org.apache.kafka.common.utils.AppInfoParser] INFO  Kafka startTimeMs: 1589524781711 [main]
+2020-05-15 14:39:41.854 [org.apache.kafka.clients.consumer.ConsumerConfig] INFO  ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = latest
+	bootstrap.servers = [192.168.10.109:9092]
+	check.crcs = true
+	client.dns.lookup = default
+	client.id = 
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = spring-boot-demo
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	session.timeout.ms = 60000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = https
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+ [main]
+2020-05-15 14:39:41.885 [org.apache.kafka.common.utils.AppInfoParser] INFO  Kafka version: 2.3.1 [main]
+2020-05-15 14:39:41.885 [org.apache.kafka.common.utils.AppInfoParser] INFO  Kafka commitId: 18a913733fb71c01 [main]
+2020-05-15 14:39:41.885 [org.apache.kafka.common.utils.AppInfoParser] INFO  Kafka startTimeMs: 1589524781885 [main]
+2020-05-15 14:39:41.886 [org.apache.kafka.clients.consumer.KafkaConsumer] INFO  [Consumer clientId=consumer-1, groupId=spring-boot-demo] Subscribed to topic(s): test1 [main]
+2020-05-15 14:39:41.887 [org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler] INFO  Initializing ExecutorService [main]
+2020-05-15 14:39:41.892 [org.springframework.amqp.rabbit.connection.CachingConnectionFactory] INFO  Attempting to connect to: [192.168.0.41:5672] [main]
+2020-05-15 14:39:41.903 [org.apache.kafka.clients.Metadata] INFO  [Consumer clientId=consumer-1, groupId=spring-boot-demo] Cluster ID: ouEtIML3Ssu4cSL1qjC-wg [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]
+2020-05-15 14:39:41.903 [org.apache.kafka.clients.consumer.internals.AbstractCoordinator] INFO  [Consumer clientId=consumer-1, groupId=spring-boot-demo] Discovered group coordinator 192.168.10.109:9092 (id: 2147483646 rack: null) [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]
+2020-05-15 14:39:41.904 [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator] INFO  [Consumer clientId=consumer-1, groupId=spring-boot-demo] Revoking previously assigned partitions [] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]
+2020-05-15 14:39:41.905 [org.springframework.kafka.listener.KafkaMessageListenerContainer] INFO  spring-boot-demo: partitions revoked: [] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]
+2020-05-15 14:39:41.906 [org.apache.kafka.clients.consumer.internals.AbstractCoordinator] INFO  [Consumer clientId=consumer-1, groupId=spring-boot-demo] (Re-)joining group [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]
+2020-05-15 14:39:41.940 [org.springframework.amqp.rabbit.connection.CachingConnectionFactory] INFO  Created new connection: rabbitConnectionFactory#55f8669d:0/SimpleConnection@7b948f3e [delegate=amqp://admin@192.168.0.41:5672/, localPort= 63990] [main]
+2020-05-15 14:39:41.981 [cn.citms.dataaccessserver.config.kafka.KafkaApplicationTests] INFO  Started KafkaApplicationTests in 3.35 seconds (JVM running for 4.13) [main]
+2020-05-15 14:39:42.157 [org.apache.kafka.clients.producer.ProducerConfig] INFO  ProducerConfig values: 
+	acks = 1
+	batch.size = 16384
+	bootstrap.servers = [192.168.10.109:9092]
+	buffer.memory = 33554432
+	client.dns.lookup = default
+	client.id = 
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = false
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 1
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.class = class org.apache.kafka.clients.producer.internals.DefaultPartitioner
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 0
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = https
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.apache.kafka.common.serialization.StringSerializer
+ [main]
+2020-05-15 14:39:42.175 [org.apache.kafka.common.utils.AppInfoParser] INFO  Kafka version: 2.3.1 [main]
+2020-05-15 14:39:42.176 [org.apache.kafka.common.utils.AppInfoParser] INFO  Kafka commitId: 18a913733fb71c01 [main]
+2020-05-15 14:39:42.176 [org.apache.kafka.common.utils.AppInfoParser] INFO  Kafka startTimeMs: 1589524782175 [main]
+2020-05-15 14:39:42.244 [org.apache.kafka.clients.Metadata] INFO  [Producer clientId=producer-1] Cluster ID: ouEtIML3Ssu4cSL1qjC-wg [kafka-producer-network-thread | producer-1]
+2020-05-15 14:39:42.782 [org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer] INFO  Waiting for workers to finish. [SpringContextShutdownHook]
+2020-05-15 14:39:42.979 [org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer] INFO  Successfully waited for workers to finish. [SpringContextShutdownHook]
+2020-05-15 14:39:42.981 [org.apache.kafka.clients.consumer.KafkaConsumer] INFO  [Consumer clientId=consumer-1, groupId=spring-boot-demo] Unsubscribed all topics or patterns and assigned partitions [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]
+2020-05-15 14:39:42.982 [org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler] INFO  Shutting down ExecutorService [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]
+2020-05-15 14:39:50.152 [org.springframework.context.support.DefaultLifecycleProcessor] INFO  Failed to shut down 1 bean with phase value 2147483547 within timeout of 30000: [org.springframework.kafka.config.internalKafkaListenerEndpointRegistry] [SpringContextShutdownHook]
+2020-05-15 14:39:50.153 [org.apache.kafka.clients.consumer.internals.AbstractCoordinator] WARN  [Consumer clientId=consumer-1, groupId=spring-boot-demo] Close timed out with 1 pending requests to coordinator, terminating client connections [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]
+2020-05-15 14:39:50.154 [org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer] INFO  Shutdown ignored - container is not active already [SpringContextShutdownHook]
+2020-05-15 14:39:50.154 [org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor] INFO  Shutting down ExecutorService 'applicationTaskExecutor' [SpringContextShutdownHook]
+2020-05-15 14:39:50.156 [org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer] INFO  spring-boot-demo: Consumer stopped [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]
+2020-05-15 14:40:02.422 [org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer] INFO  spring-boot-demo: Consumer stopped [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]
+2020-05-15 14:40:02.425 [org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer] INFO  Shutdown ignored - container is not active already [SpringContextShutdownHook]
+2020-05-15 14:40:02.426 [org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor] INFO  Shutting down ExecutorService 'applicationTaskExecutor' [SpringContextShutdownHook]
+2020-05-15 14:49:09.700 [cn.citms.dataaccessserver.config.kafka.KafkaApplicationTests] INFO  Starting KafkaApplicationTests on DESKTOP-E039QA7 with PID 1324 (started by DELL in D:\IdeaProjects\DataAccessService\blade-service\citms-dataaccess-server-facealarm) [main]
+2020-05-15 14:49:09.704 [cn.citms.dataaccessserver.config.kafka.KafkaApplicationTests] INFO  The following profiles are active: dev [main]
+2020-05-15 14:49:12.207 [org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor] INFO  Initializing ExecutorService 'applicationTaskExecutor' [main]
+2020-05-15 14:49:12.706 [org.apache.kafka.clients.admin.AdminClientConfig] INFO  AdminClientConfig values: 
+	bootstrap.servers = [192.168.10.109:9092]
+	client.dns.lookup = default
+	client.id = 
+	connections.max.idle.ms = 300000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 120000
+	retries = 5
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = https
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+ [main]
+2020-05-15 14:49:12.786 [org.apache.kafka.common.utils.AppInfoParser] INFO  Kafka version: 2.3.1 [main]
+2020-05-15 14:49:12.787 [org.apache.kafka.common.utils.AppInfoParser] INFO  Kafka commitId: 18a913733fb71c01 [main]
+2020-05-15 14:49:12.788 [org.apache.kafka.common.utils.AppInfoParser] INFO  Kafka startTimeMs: 1589525352785 [main]
+2020-05-15 14:49:13.013 [org.apache.kafka.clients.consumer.ConsumerConfig] INFO  ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = latest
+	bootstrap.servers = [192.168.10.109:9092]
+	check.crcs = true
+	client.dns.lookup = default
+	client.id = 
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = spring-boot-demo
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	session.timeout.ms = 60000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = https
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+ [main]
+2020-05-15 14:49:13.050 [org.apache.kafka.common.utils.AppInfoParser] INFO  Kafka version: 2.3.1 [main]
+2020-05-15 14:49:13.050 [org.apache.kafka.common.utils.AppInfoParser] INFO  Kafka commitId: 18a913733fb71c01 [main]
+2020-05-15 14:49:13.050 [org.apache.kafka.common.utils.AppInfoParser] INFO  Kafka startTimeMs: 1589525353050 [main]
+2020-05-15 14:49:13.051 [org.apache.kafka.clients.consumer.KafkaConsumer] INFO  [Consumer clientId=consumer-1, groupId=spring-boot-demo] Subscribed to topic(s): test1 [main]
+2020-05-15 14:49:13.053 [org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler] INFO  Initializing ExecutorService [main]
+2020-05-15 14:49:13.058 [org.springframework.amqp.rabbit.connection.CachingConnectionFactory] INFO  Attempting to connect to: [192.168.0.41:5672] [main]
+2020-05-15 14:49:13.071 [org.apache.kafka.clients.Metadata] INFO  [Consumer clientId=consumer-1, groupId=spring-boot-demo] Cluster ID: ouEtIML3Ssu4cSL1qjC-wg [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]
+2020-05-15 14:49:13.072 [org.apache.kafka.clients.consumer.internals.AbstractCoordinator] INFO  [Consumer clientId=consumer-1, groupId=spring-boot-demo] Discovered group coordinator 192.168.10.109:9092 (id: 2147483646 rack: null) [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]
+2020-05-15 14:49:13.074 [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator] INFO  [Consumer clientId=consumer-1, groupId=spring-boot-demo] Revoking previously assigned partitions [] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]
+2020-05-15 14:49:13.074 [org.springframework.kafka.listener.KafkaMessageListenerContainer] INFO  spring-boot-demo: partitions revoked: [] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]
+2020-05-15 14:49:13.076 [org.apache.kafka.clients.consumer.internals.AbstractCoordinator] INFO  [Consumer clientId=consumer-1, groupId=spring-boot-demo] (Re-)joining group [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]
+2020-05-15 14:49:13.100 [org.apache.kafka.clients.consumer.internals.AbstractCoordinator] INFO  [Consumer clientId=consumer-1, groupId=spring-boot-demo] Successfully joined group with generation 102 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]
+2020-05-15 14:49:13.104 [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator] INFO  [Consumer clientId=consumer-1, groupId=spring-boot-demo] Setting newly assigned partitions: test1-0 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]
+2020-05-15 14:49:13.112 [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator] INFO  [Consumer clientId=consumer-1, groupId=spring-boot-demo] Setting offset for partition test1-0 to the committed offset FetchPosition{offset=4, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=192.168.10.109:9092 (id: 1 rack: null), epoch=-1}} [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]
+2020-05-15 14:49:13.119 [org.springframework.kafka.listener.KafkaMessageListenerContainer] INFO  spring-boot-demo: partitions assigned: [test1-0] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]
+2020-05-15 14:49:13.128 [org.springframework.amqp.rabbit.connection.CachingConnectionFactory] INFO  Created new connection: rabbitConnectionFactory#1e95b653:0/SimpleConnection@216c22ce [delegate=amqp://admin@192.168.0.41:5672/, localPort= 64256] [main]
+2020-05-15 14:49:13.177 [cn.citms.dataaccessserver.handler.KafkaHandler] INFO  收到消息: {"id":"201905200000002","messageId":"1589524782146$3a4ba9ba-26fe-48c9-82ad-e4004ec6ad26","name":"测试创建订单"} [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]
+2020-05-15 14:49:13.211 [cn.citms.dataaccessserver.config.kafka.KafkaApplicationTests] INFO  Started KafkaApplicationTests in 4.107 seconds (JVM running for 4.989) [main]
+2020-05-15 14:49:13.599 [org.apache.kafka.clients.producer.ProducerConfig] INFO  ProducerConfig values: 
+	acks = 1
+	batch.size = 2
+	bootstrap.servers = [192.168.10.109:9092]
+	buffer.memory = 33554
+	client.dns.lookup = default
+	client.id = 
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = false
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.class = class org.apache.kafka.clients.producer.internals.DefaultPartitioner
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 0
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = https
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.apache.kafka.common.serialization.StringSerializer
+ [main]
+2020-05-15 14:49:13.614 [org.apache.kafka.common.utils.AppInfoParser] INFO  Kafka version: 2.3.1 [main]
+2020-05-15 14:49:13.614 [org.apache.kafka.common.utils.AppInfoParser] INFO  Kafka commitId: 18a913733fb71c01 [main]
+2020-05-15 14:49:13.615 [org.apache.kafka.common.utils.AppInfoParser] INFO  Kafka startTimeMs: 1589525353614 [main]
+2020-05-15 14:49:13.626 [org.apache.kafka.clients.Metadata] INFO  [Producer clientId=producer-1] Cluster ID: ouEtIML3Ssu4cSL1qjC-wg [kafka-producer-network-thread | producer-1]
+2020-05-15 14:49:14.202 [cn.citms.dataaccessserver.handler.KafkaHandler] INFO  收到消息: {"id":"201905200000002","messageId":"1589525353514$b1704f39-7221-4a52-ac21-a820d5a45279","name":"测试创建订单"} [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]
+2020-05-15 14:49:14.213 [org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer] INFO  Waiting for workers to finish. [SpringContextShutdownHook]
+2020-05-15 14:49:15.200 [org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer] INFO  Successfully waited for workers to finish. [SpringContextShutdownHook]
+2020-05-15 14:49:15.203 [org.apache.kafka.clients.consumer.internals.AbstractCoordinator] INFO  [Consumer clientId=consumer-1, groupId=spring-boot-demo] Member consumer-1-a467374f-dc08-4ddc-a6d1-dc1094d0cc4c sending LeaveGroup request to coordinator 192.168.10.109:9092 (id: 2147483646 rack: null) [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]
+2020-05-15 14:49:15.204 [org.apache.kafka.clients.consumer.KafkaConsumer] INFO  [Consumer clientId=consumer-1, groupId=spring-boot-demo] Unsubscribed all topics or patterns and assigned partitions [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]
+2020-05-15 14:49:15.204 [org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler] INFO  Shutting down ExecutorService [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]
+2020-05-15 14:49:15.208 [org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer] INFO  spring-boot-demo: Consumer stopped [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]
+2020-05-15 14:49:15.212 [org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer] INFO  Shutdown ignored - container is not active already [SpringContextShutdownHook]
+2020-05-15 14:49:15.212 [org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor] INFO  Shutting down ExecutorService 'applicationTaskExecutor' [SpringContextShutdownHook]
+2020-05-15 14:49:15.212 [org.apache.kafka.clients.producer.KafkaProducer] INFO  [Producer clientId=producer-1] Closing the Kafka producer with timeoutMillis = 30000 ms. [SpringContextShutdownHook]
+2020-05-15 14:49:46.396 [cn.citms.dataaccessserver.config.kafka.KafkaApplicationTests] INFO  Starting KafkaApplicationTests on DESKTOP-E039QA7 with PID 4348 (started by DELL in D:\IdeaProjects\DataAccessService\blade-service\citms-dataaccess-server-facealarm) [main]
+2020-05-15 14:49:46.397 [cn.citms.dataaccessserver.config.kafka.KafkaApplicationTests] INFO  The following profiles are active: dev [main]
+2020-05-15 14:49:48.498 [org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor] INFO  Initializing ExecutorService 'applicationTaskExecutor' [main]
+2020-05-15 14:49:48.962 [org.apache.kafka.clients.admin.AdminClientConfig] INFO  AdminClientConfig values: 
+	bootstrap.servers = [192.168.10.109:9092]
+	client.dns.lookup = default
+	client.id = 
+	connections.max.idle.ms = 300000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 120000
+	retries = 5
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = https
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+ [main]
+2020-05-15 14:49:49.026 [org.apache.kafka.common.utils.AppInfoParser] INFO  Kafka version: 2.3.1 [main]
+2020-05-15 14:49:49.027 [org.apache.kafka.common.utils.AppInfoParser] INFO  Kafka commitId: 18a913733fb71c01 [main]
+2020-05-15 14:49:49.028 [org.apache.kafka.common.utils.AppInfoParser] INFO  Kafka startTimeMs: 1589525389025 [main]
+2020-05-15 14:49:49.162 [org.apache.kafka.clients.consumer.ConsumerConfig] INFO  ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = latest
+	bootstrap.servers = [192.168.10.109:9092]
+	check.crcs = true
+	client.dns.lookup = default
+	client.id = 
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = spring-boot-demo
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	session.timeout.ms = 60000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = https
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+ [main]
+2020-05-15 14:49:49.190 [org.apache.kafka.common.utils.AppInfoParser] INFO  Kafka version: 2.3.1 [main]
+2020-05-15 14:49:49.190 [org.apache.kafka.common.utils.AppInfoParser] INFO  Kafka commitId: 18a913733fb71c01 [main]
+2020-05-15 14:49:49.190 [org.apache.kafka.common.utils.AppInfoParser] INFO  Kafka startTimeMs: 1589525389190 [main]
+2020-05-15 14:49:49.191 [org.apache.kafka.clients.consumer.KafkaConsumer] INFO  [Consumer clientId=consumer-1, groupId=spring-boot-demo] Subscribed to topic(s): test1 [main]
+2020-05-15 14:49:49.192 [org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler] INFO  Initializing ExecutorService [main]
+2020-05-15 14:49:49.196 [org.springframework.amqp.rabbit.connection.CachingConnectionFactory] INFO  Attempting to connect to: [192.168.0.41:5672] [main]
+2020-05-15 14:49:49.207 [org.apache.kafka.clients.Metadata] INFO  [Consumer clientId=consumer-1, groupId=spring-boot-demo] Cluster ID: ouEtIML3Ssu4cSL1qjC-wg [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]
+2020-05-15 14:49:49.207 [org.apache.kafka.clients.consumer.internals.AbstractCoordinator] INFO  [Consumer clientId=consumer-1, groupId=spring-boot-demo] Discovered group coordinator 192.168.10.109:9092 (id: 2147483646 rack: null) [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]
+2020-05-15 14:49:49.209 [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator] INFO  [Consumer clientId=consumer-1, groupId=spring-boot-demo] Revoking previously assigned partitions [] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]
+2020-05-15 14:49:49.209 [org.springframework.kafka.listener.KafkaMessageListenerContainer] INFO  spring-boot-demo: partitions revoked: [] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]
+2020-05-15 14:49:49.209 [org.apache.kafka.clients.consumer.internals.AbstractCoordinator] INFO  [Consumer clientId=consumer-1, groupId=spring-boot-demo] (Re-)joining group [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]
+2020-05-15 14:49:49.233 [org.apache.kafka.clients.consumer.internals.AbstractCoordinator] INFO  [Consumer clientId=consumer-1, groupId=spring-boot-demo] Successfully joined group with generation 104 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]
+2020-05-15 14:49:49.236 [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator] INFO  [Consumer clientId=consumer-1, groupId=spring-boot-demo] Setting newly assigned partitions: test1-0 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]
+2020-05-15 14:49:49.243 [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator] INFO  [Consumer clientId=consumer-1, groupId=spring-boot-demo] Setting offset for partition test1-0 to the committed offset FetchPosition{offset=6, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=192.168.10.109:9092 (id: 1 rack: null), epoch=-1}} [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]
+2020-05-15 14:49:49.246 [org.springframework.amqp.rabbit.connection.CachingConnectionFactory] INFO  Created new connection: rabbitConnectionFactory#42e22a53:0/SimpleConnection@3bd2af5b [delegate=amqp://admin@192.168.0.41:5672/, localPort= 64295] [main]
+2020-05-15 14:49:49.250 [org.springframework.kafka.listener.KafkaMessageListenerContainer] INFO  spring-boot-demo: partitions assigned: [test1-0] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]
+2020-05-15 14:49:49.287 [cn.citms.dataaccessserver.config.kafka.KafkaApplicationTests] INFO  Started KafkaApplicationTests in 3.251 seconds (JVM running for 3.937) [main]
+2020-05-15 14:49:49.483 [org.apache.kafka.clients.producer.ProducerConfig] INFO  ProducerConfig values: 
+	acks = 1
+	batch.size = 2
+	bootstrap.servers = [192.168.10.109:9092]
+	buffer.memory = 33554
+	client.dns.lookup = default
+	client.id = 
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = false
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.class = class org.apache.kafka.clients.producer.internals.DefaultPartitioner
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 0
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = https
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.apache.kafka.common.serialization.StringSerializer
+ [main]
+2020-05-15 14:49:49.499 [org.apache.kafka.common.utils.AppInfoParser] INFO  Kafka version: 2.3.1 [main]
+2020-05-15 14:49:49.499 [org.apache.kafka.common.utils.AppInfoParser] INFO  Kafka commitId: 18a913733fb71c01 [main]
+2020-05-15 14:49:49.499 [org.apache.kafka.common.utils.AppInfoParser] INFO  Kafka startTimeMs: 1589525389499 [main]
+2020-05-15 14:49:49.509 [org.apache.kafka.clients.Metadata] INFO  [Producer clientId=producer-1] Cluster ID: ouEtIML3Ssu4cSL1qjC-wg [kafka-producer-network-thread | producer-1]
+2020-05-15 14:49:50.051 [org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer] INFO  Waiting for workers to finish. [SpringContextShutdownHook]
+2020-05-15 14:49:50.053 [cn.citms.dataaccessserver.handler.KafkaHandler] INFO  kafka收到消息: {"id":"201905200000002","messageId":"1589525389419$810c2d4b-8f25-411d-a9c4-404a4dd3f4d3","name":"测试创建订单"} [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]
+2020-05-15 14:49:50.285 [org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer] INFO  Successfully waited for workers to finish. [SpringContextShutdownHook]
+2020-05-15 14:49:50.287 [org.apache.kafka.clients.consumer.internals.AbstractCoordinator] INFO  [Consumer clientId=consumer-1, groupId=spring-boot-demo] Member consumer-1-4d948442-ab3d-428a-9d01-a3e241223038 sending LeaveGroup request to coordinator 192.168.10.109:9092 (id: 2147483646 rack: null) [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]
+2020-05-15 14:49:50.288 [org.apache.kafka.clients.consumer.KafkaConsumer] INFO  [Consumer clientId=consumer-1, groupId=spring-boot-demo] Unsubscribed all topics or patterns and assigned partitions [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]
+2020-05-15 14:49:50.288 [org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler] INFO  Shutting down ExecutorService [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]
+2020-05-15 14:49:50.296 [org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer] INFO  spring-boot-demo: Consumer stopped [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]
+2020-05-15 14:49:50.298 [org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer] INFO  Shutdown ignored - container is not active already [SpringContextShutdownHook]
+2020-05-15 14:49:50.299 [org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor] INFO  Shutting down ExecutorService 'applicationTaskExecutor' [SpringContextShutdownHook]
+2020-05-15 14:49:50.299 [org.apache.kafka.clients.producer.KafkaProducer] INFO  [Producer clientId=producer-1] Closing the Kafka producer with timeoutMillis = 30000 ms. [SpringContextShutdownHook]
